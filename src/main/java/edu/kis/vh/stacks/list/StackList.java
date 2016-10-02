@@ -1,9 +1,10 @@
 package edu.kis.vh.stacks.list;
 
+import edu.kis.vh.stacks.Stack;
+
 public class StackList {
 
-    Node last;
-    int i;
+    private Node last;
 
     public void pushElement(int i) {
         if (last == null)
@@ -25,16 +26,15 @@ public class StackList {
 
     public int peek() {
         if (empty())
-            return -1;
+            return Stack.EMPTY_STACK_VALUE;
         return last.value;
     }
 
     public int pop() {
         if (empty())
-            return -1;
+            return Stack.EMPTY_STACK_VALUE;
         int ret = last.value;
         last = last.prev;
         return ret;
     }
-
 }
