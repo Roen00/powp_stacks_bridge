@@ -1,8 +1,20 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackList;
+
 public class StackFIFO extends Stack {
 
-    private Stack temp = new Stack();
+    final private Stack temp;
+
+    public StackFIFO() {
+        super();
+        temp = new Stack(new StackList());
+    }
+
+    public StackFIFO(StackInterface stackInterface) {
+        super(stackInterface);
+        temp = new Stack(stackInterface);
+    }
 
     @Override
     public int pop() {
