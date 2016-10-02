@@ -1,35 +1,59 @@
 package edu.kis.vh.stacks.demo;
 
+import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
-import edu.kis.vh.stacks.Stack;
 
 class StacksDemo {
 
     public static void main(String[] args) {
-        DefaultStacksFactory factory = new DefaultStacksFactory();
+        testStacks(new DefaultStacksFactory());
+    }
 
+    private static void testStacks(DefaultStacksFactory factory) {
         Stack[] stacks = {factory.GetStandardStack(), factory.GetFalseStack(),
                 factory.GetFIFOStack(), factory.GetHanoiStack()};
+        final int numberOfStacks = stacks.length - 1;
+        final int numberOfPushedElementsToStack = 15;
+        final int numberOfStackWithoutLast = numberOfStacks - 1;
 
-        for (int i = 1; i < 15; i++)
-            for (int j = 0; j < 3; j++)
-                stacks[j].push(i);
+        fillAllStacksExceptHanoi(numberOfPushedElementsToStack, stacks, numberOfStackWithoutLast);
 
-        //zle formatowanie
-        java.util.Random rn = new java.util.Random();
-        for (int i = 1; i < 15; i++)
-            stacks[3].push(rn.nextInt(20));
-        //zle formatowanie
-        for (int i = 0; i < stacks.length; i++) {
-            while (!stacks[i].isEmpty())
-                System.out.print(stacks[i].pop() + "  ");
-            //zle formatowanie
-            System.out.println();
-        }
+        final Stack hanoisStack = stacks[numberOfStacks];
+        fillHanoiStack(numberOfPushedElementsToStack, hanoisStack);
+        printAllStacks(stacks);
+
 
         System.out.println("total rejected is "
                 + ((StackHanoi) stacks[3]).reportRejected());
+    }
 
+    private static void fillAllStacksExceptHanoi(int numberOfPushedElementsToStack, Stack[] stacks,
+                                                 int numberOfStackWithoutLast) {
+        //zle formatowanie
+        for (int i = 1; i < numberOfPushedElementsToStack; i++) {
+            for (int j = 0; j < numberOfStackWithoutLast; j++) {
+                stacks[j].push(i);
+            }
+        }
+    }
+
+    private static void fillHanoiStack(int numberOfPushedElementsToStack, Stack stack) {
+        java.util.Random rn = new java.util.Random();
+        final int maximumRandomValue = 20;
+        for (int i = 1; i < numberOfPushedElementsToStack; i++) {
+            stack.push(rn.nextInt(maximumRandomValue));
+        }
+    }
+
+    private static void printAllStacks(Stack[] stacks) {
+        //zle formatowanie
+        for (Stack stack : stacks) {
+            while (!stack.isEmpty()) {
+                System.out.print(stack.pop() + "  ");
+            }
+            //zle formatowanie
+            System.out.println();
+        }
     }
 }//brak pustej lini na koncu pliku
