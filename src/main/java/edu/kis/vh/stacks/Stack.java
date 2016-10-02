@@ -4,40 +4,39 @@ package edu.kis.vh.stacks;
  * The class which implements basic stack functionality
  */
 public class Stack {
-    public final static int EMPTY_STACK_VALUE = -1;
-    public final static int STACK_CAPACITY = 12;
 
-    private final int[] items = new int[STACK_CAPACITY];
-    private int total = EMPTY_STACK_VALUE;
+    private final StackInterface stack;
+
+    public Stack(StackInterface stack) {
+        this.stack = stack;
+    }
+
+    /**
+     * provides default stack implementation which is StackArray
+     */
+    public Stack() {
+        this(new StackArray());
+    }
+
 
     public void push(int i) {
-        if (!isFull()) {
-            items[++total] = i;
-        }
+        stack.pushElement(i);
     }
 
     public boolean isEmpty() {
-        return total == EMPTY_STACK_VALUE;
+        return stack.empty();
     }
 
     public boolean isFull() {
-        return total == STACK_CAPACITY - 1;
+        return stack.full();
     }
 
     public int top() {
-        if (isEmpty()) {
-            return EMPTY_STACK_VALUE;
-        } else {
-            return items[total];
-        }
+        return stack.peek();
     }
 
     public int pop() {
-        if (isEmpty()) {
-            return EMPTY_STACK_VALUE;
-        } else {
-            return items[total--];
-        }
+        return stack.pop();
     }
 
 }
