@@ -14,6 +14,6 @@ public class StackFIFOTest {
         stack.push(2);
         assert(stack.pop() == 1);
         assert(stack.pop() == 2);
-        assert(stack.pop() == Stack.EMPTY_STACK_VALUE);
+        assert(stack.pop() == StackInterface.EMPTY_STACK_VALUE);
     }
 }

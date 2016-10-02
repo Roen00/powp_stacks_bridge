@@ -2,6 +2,7 @@ package edu.kis.vh.stacks.unittests;
 
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackArray;
+import edu.kis.vh.stacks.StackInterface;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -47,7 +48,7 @@ public class StackArrayTest {
         Stack stackObj = new Stack();
 
         int result = stackObj.top();
-        Assert.assertEquals(Stack.EMPTY_STACK_VALUE, result);
+        Assert.assertEquals(StackInterface.EMPTY_STACK_VALUE, result);
 
         int testValue = 4;
         stackObj.push(testValue);
@@ -63,7 +64,7 @@ public class StackArrayTest {
         Stack stackObj = new Stack();
 
         int result = stackObj.pop();
-        Assert.assertEquals(Stack.EMPTY_STACK_VALUE, result);
+        Assert.assertEquals(StackInterface.EMPTY_STACK_VALUE, result);
 
         int testValue = 4;
         stackObj.push(testValue);
@@ -71,7 +72,7 @@ public class StackArrayTest {
         result = stackObj.pop();
         Assert.assertEquals(testValue, result);
         result = stackObj.pop();
-        Assert.assertEquals(Stack.EMPTY_STACK_VALUE, result);
+        Assert.assertEquals(StackInterface.EMPTY_STACK_VALUE, result);
     }
 
 }

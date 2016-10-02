@@ -4,7 +4,7 @@ public class StackArray implements StackInterface {
     public final static int STACK_CAPACITY = 12;
 
     private final int[] items = new int[STACK_CAPACITY];
-    private int total = Stack.EMPTY_STACK_VALUE;
+    private int total = StackInterface.EMPTY_STACK_VALUE;
 
     @Override
     public void pushElement(int i) {
@@ -15,7 +15,7 @@ public class StackArray implements StackInterface {
 
     @Override
     public boolean empty() {
-        return total == Stack.EMPTY_STACK_VALUE;
+        return total == StackInterface.EMPTY_STACK_VALUE;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class StackArray implements StackInterface {
     @Override
     public int peek() {
         if (empty()) {
-            return Stack.EMPTY_STACK_VALUE;
+            return StackInterface.EMPTY_STACK_VALUE;
         } else {
             return items[total];
         }
@@ -35,7 +35,7 @@ public class StackArray implements StackInterface {
     @Override
     public int pop() {
         if (empty()) {
-            return Stack.EMPTY_STACK_VALUE;
+            return StackInterface.EMPTY_STACK_VALUE;
         } else {
             return items[total--];
         }

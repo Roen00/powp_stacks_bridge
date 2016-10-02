@@ -30,14 +30,14 @@ public class StackList implements StackInterface {
     @Override
     public int peek() {
         if (empty())
-            return Stack.EMPTY_STACK_VALUE;
+            return StackInterface.EMPTY_STACK_VALUE;
         return last.value;
     }
 
     @Override
     public int pop() {
         if (empty())
-            return Stack.EMPTY_STACK_VALUE;
+            return StackInterface.EMPTY_STACK_VALUE;
         int ret = last.value;
         last = last.prev;
         return ret;
