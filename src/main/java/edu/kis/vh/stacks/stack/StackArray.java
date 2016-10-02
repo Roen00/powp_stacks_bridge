@@ -4,7 +4,7 @@ public class StackArray implements StackInterface {
     public final static int STACK_CAPACITY = 12;
 
     private final int[] items = new int[STACK_CAPACITY];
-    private int total = StackInterface.EMPTY_STACK_VALUE;
+    private int total = -1;
 
     @Override
     public void pushElement(int i) {
