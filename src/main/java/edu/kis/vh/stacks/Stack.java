@@ -8,8 +8,9 @@ public class Stack {
     private int total = EMPTY_STACK_VALUE;
 
     public void push(int i) {
-        if (!isFull())
+        if (!isFull()) {
             items[++total] = i;
+        }
     }
 
     public boolean isEmpty() {
@@ -21,15 +22,19 @@ public class Stack {
     }
 
     public int top() {
-        if (isEmpty())
+        if (isEmpty()) {
             return EMPTY_STACK_VALUE;
-        return items[total];
+        } else {
+            return items[total];
+        }
     }
 
     public int pop() {
-        if (isEmpty())
+        if (isEmpty()) {
             return EMPTY_STACK_VALUE;
-        return items[total--];
+        } else {
+            return items[total--];
+        }
     }
 
 }
