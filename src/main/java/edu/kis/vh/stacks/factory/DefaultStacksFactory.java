@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 
-public class DefaultStacksFactory implements IstacksFactory {
+public class DefaultStacksFactory implements IStacksFactory {
 
     @Override
     public Stack GetStandardStack() {
