@@ -1,5 +1,8 @@
 package edu.kis.vh.stacks;
 
+/**
+ * The class which implements basic stack functionality
+ */
 public class Stack {
     public final static int EMPTY_STACK_VALUE = -1;
     public final static int STACK_CAPACITY = 12;

@@ -4,6 +4,9 @@ import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 
+/**
+ * Default implementation of StacksFactory
+ */
 public class DefaultStacksFactory implements IStacksFactory {
 
     @Override
