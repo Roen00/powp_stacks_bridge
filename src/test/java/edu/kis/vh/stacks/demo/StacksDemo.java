@@ -2,14 +2,14 @@ package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
-import edu.kis.vh.stacks.stack;
+import edu.kis.vh.stacks.Stack;
 
 class StacksDemo {
 
     public static void main(String[] args) {
         DefaultStacksFactory factory = new DefaultStacksFactory();
 
-        stack[] stacks = {factory.GetStandardStack(), factory.GetFalseStack(),
+        Stack[] stacks = {factory.GetStandardStack(), factory.GetFalseStack(),
                 factory.GetFIFOStack(), factory.GetHanoiStack()};
 
         for (int i = 1; i < 15; i++)
