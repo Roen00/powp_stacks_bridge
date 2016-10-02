@@ -1,8 +1,5 @@
 package edu.kis.vh.stacks.list;
 
-import edu.kis.vh.stacks.Stack;
-import edu.kis.vh.stacks.StackInterface;
-
 public class StackList implements StackInterface {
     private Node last;
 

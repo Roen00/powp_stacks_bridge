@@ -1,5 +1,6 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackInterface;
 import edu.kis.vh.stacks.list.StackList;
 
 public class StackFIFO extends Stack {

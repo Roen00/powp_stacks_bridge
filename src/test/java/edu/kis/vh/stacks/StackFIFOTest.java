@@ -1,9 +1,7 @@
 package edu.kis.vh.stacks;
 
-import org.junit.Assert;
+import edu.kis.vh.stacks.list.StackInterface;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class StackFIFOTest {
 

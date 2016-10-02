@@ -1,8 +1,8 @@
 package edu.kis.vh.stacks.unittests;
 
 import edu.kis.vh.stacks.Stack;
-import edu.kis.vh.stacks.StackArray;
-import edu.kis.vh.stacks.StackInterface;
+import edu.kis.vh.stacks.list.StackArray;
+import edu.kis.vh.stacks.list.StackInterface;
 import org.junit.Assert;
 import org.junit.Test;
 
