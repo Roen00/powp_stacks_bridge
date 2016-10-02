@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackInterface;
-import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.stack.StackInterface;
+import edu.kis.vh.stacks.stack.StackList;
 
 public class StackFIFO extends Stack {
 

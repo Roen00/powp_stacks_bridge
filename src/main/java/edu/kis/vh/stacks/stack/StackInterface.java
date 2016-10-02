@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.stack;
 
 public interface StackInterface {
     int EMPTY_STACK_VALUE = -1;

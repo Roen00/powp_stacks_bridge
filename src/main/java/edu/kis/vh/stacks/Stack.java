@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackArray;
-import edu.kis.vh.stacks.list.StackInterface;
+import edu.kis.vh.stacks.stack.StackArray;
+import edu.kis.vh.stacks.stack.StackInterface;
 
 /**
  * The class which implements basic stack functionality

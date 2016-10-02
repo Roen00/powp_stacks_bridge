@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackInterface;
+import edu.kis.vh.stacks.stack.StackInterface;
 import org.junit.Test;
 
 public class StackFIFOTest {
