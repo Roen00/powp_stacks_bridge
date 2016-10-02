@@ -16,9 +16,8 @@ class StacksDemo {
                 factory.GetFIFOStack(), factory.GetHanoiStack()};
         final int numberOfStacks = stacks.length - 1;
         final int numberOfPushedElementsToStack = 15;
-        final int numberOfStackWithoutLast = numberOfStacks - 1;
 
-        fillAllStacksExceptHanoi(numberOfPushedElementsToStack, stacks, numberOfStackWithoutLast);
+        fillAllStacksExceptHanoi(numberOfPushedElementsToStack, stacks, numberOfStacks);
 
         final Stack hanoisStack = stacks[numberOfStacks];
         fillHanoiStack(numberOfPushedElementsToStack, hanoisStack);
@@ -49,12 +48,14 @@ class StacksDemo {
 
     private static void printAllStacks(Stack[] stacks) {
         //zle formatowanie
+        System.out.println("=====================================");
         for (Stack stack : stacks) {
             while (!stack.isEmpty()) {
                 System.out.print(stack.pop() + "  ");
             }
             //zle formatowanie
             System.out.println();
+            System.out.println("=====================================");
         }
     }
 }//brak pustej lini na koncu pliku
