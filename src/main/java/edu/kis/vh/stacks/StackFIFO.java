@@ -6,13 +6,15 @@ public class StackFIFO extends Stack {
 
     @Override
     public int pop() {
-        while (!isEmpty())
+        while (!isEmpty()) {
             temp.push(super.pop());
+        }
 
         int ret = temp.pop();
 
-        while (!temp.isEmpty())
+        while (!temp.isEmpty()) {
             push(temp.pop());
+        }
 
         return ret;
     }
